@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis XV - Angelica Rodríguez Escobedo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Poppins',sans-serif;
+color:white;
+text-align:center;
+overflow-x:hidden;
+background:#000;
+}
+
+/* FONDO CASTILLO */
+.castle-bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:url("castillo.jpg") center center / cover no-repeat;
+z-index:-3;
+animation:zoomCastle 30s infinite alternate ease-in-out;
+}
+
+@keyframes zoomCastle{
+from{transform:scale(1);}
+to{transform:scale(1.08);}
+}
+
+/* OSCURECER PARA LEER */
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(
+to bottom,
+rgba(11,28,94,0.85),
+rgba(30,63,168,0.85),
+rgba(11,28,94,0.9)
+);
+z-index:-2;
+}
+
+/* INTRO */
+#intro{
+position:fixed;
+width:100%;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:radial-gradient(circle,#6ea8ff,#1e3fa8,#0b1c5e);
+z-index:999;
+transition:1s;
+}
+
+#intro h1{
+font-family:'Great Vibes',cursive;
+font-size:42px;
+margin-bottom:20px;
+text-shadow:0 0 20px #fff;
+}
+
+.open-btn{
+padding:15px 35px;
+border-radius:40px;
+border:none;
+background:white;
+color:#0b1c5e;
+font-weight:bold;
+font-size:16px;
+cursor:pointer;
+}
+
+/* SECCIONES */
+.section{
+display:none;
+max-width:500px;
+margin:auto;
+padding:40px 20px;
+animation:fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+h2{
+font-family:'Great Vibes',cursive;
+font-size:34px;
+margin-bottom:20px;
+text-shadow:0 0 15px #cfe9ff;
+}
+
+p{margin:10px 0;line-height:1.6}
+
+/* FOTO */
+.photo-wrapper{
+position:relative;
+display:inline-block;
+margin-top:15px;
+}
+
+.photo-wrapper::before{
+content:"";
+position:absolute;
+width:220px;
+height:220px;
+background:radial-gradient(circle,#ffffff,#6ea8ff,transparent 70%);
+border-radius:50%;
+animation:halo 4s infinite alternate;
+z-index:0;
+}
+
+@keyframes halo{
+from{opacity:0.6;transform:scale(1)}
+to{opacity:1;transform:scale(1.1)}
+}
+
+img{
+position:relative;
+width:180px;
+border-radius:50%;
+border:5px solid #fff;
+box-shadow:0 0 30px #a3d5ff;
+z-index:1;
+}
+
+/* BOTONES */
+.button{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+border-radius:30px;
+background:white;
+color:#0b1c5e;
+font-weight:bold;
+text-decoration:none;
+cursor:pointer;
+box-shadow:0 0 20px #a3d5ff;
+border:none;
+}
+
+/* INPUT */
+input{
+padding:12px;
+border-radius:20px;
+border:none;
+width:80%;
+max-width:300px;
+text-align:center;
+font-size:14px;
+}
+
+/* DESTELLOS */
+.sparkle{
+position:absolute;
+width:4px;
+height:4px;
+background:white;
+border-radius:50%;
+animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+from{opacity:0.3}
+to{opacity:1}
+}
+
+.magic-text{
+margin-top:20px;
+font-size:18px;
+display:none;
+text-shadow:0 0 15px #fff;
+}
+
+footer{
+margin-top:40px;
+font-size:14px;
+opacity:0.8;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="castle-bg"></div>
+<div class="overlay"></div>
+
+<!-- INTRO -->
+<div id="intro">
+<h1>Mis XV Años</h1>
+<button class="open-btn" onclick="startInvite()">Abrir Invitación</button>
+</div>
+
+<audio id="music" loop>
+<source src="vals.mp3" type="audio/mpeg">
+</audio>
+
+<!-- SECCIÓN 1 -->
+<div class="section" id="s1">
+<h2>Angelica Rodríguez Escobedo</h2>
+
+<div class="photo-wrapper">
+<img src="angelica.jpg" alt="angelica">
+</div>
+
+<p>
+Hace quince años comenzó mi historia,<br>
+un pequeño latido lleno de amor.<br>
+Hoy florecen mis sueños como rosas<br>
+bajo la bendición de Dios.<br><br>
+
+Con ilusión y gratitud infinita,<br>
+quiero que seas parte de esta noche mágica<br>
+donde celebraré mis 15 años.
+</p>
+
+<button class="button" onclick="nextSection(2)">Continuar ✨</button>
+</div>
+
+<!-- SECCIÓN 2 -->
+<div class="section" id="s2">
+<h2>Con la bendición de Dios</h2>
+
+<p><strong>Mis padres</strong><br>
+Yosver Rodríguez Rodríguez<br>
+Jenny Escobedo Álvarez</p>
+
+<p><strong>Mis padrinos</strong><br>
+Jhon Moreno Hurtado<br>
+Sharmin Rivas Eguizabal<br>
+Raúl Valle Pérez<br>
+Roxana Guerrero Narró</p>
+
+<button class="button" onclick="nextSection(3)">Continuar ✨</button>
+</div>
+
+<!-- SECCIÓN 3 -->
+<div class="section" id="s3">
+<h2>Detalles del Evento</h2>
+
+<p>
+📅 14 de marzo<br>
+🕗 8:00 PM
+</p>
+
+<p>
+📍 Mz X Prima Lt 10 Villa Huanchaco<br>
+Referencia: A 2 cuadras de la posta médica de Manuel Arévalo
+</p>
+
+<a class="button" href="https://maps.google.com/?q=-8.075103,-79.066162" target="_blank">
+Ver Ubicación
+</a>
+
+<button class="button" onclick="nextSection(4)">Continuar ✨</button>
+</div>
+
+<!-- SECCIÓN 4 -->
+<div class="section" id="s4">
+<h2>Código de Vestimenta</h2>
+
+<p>
+El color CELESTE es exclusivo para la quinceañera.<br>
+Todos los demás colores están disponibles.
+</p>
+
+<p>
+Tu presencia es el mejor regalo.<br>
+Si deseas hacerme un detalle será bienvenido.
+</p>
+
+<p><strong>YAPE: 958735157</strong></p>
+
+<button class="button" onclick="copyNumber()">Copiar Número</button>
+
+<button class="button" onclick="nextSection(5)">Confirmar Asistencia ✨</button>
+</div>
+
+<!-- SECCIÓN 5 -->
+<div class="section" id="s5">
+<h2>Confirmar Asistencia</h2>
+
+<p>Escribe tu nombre:</p>
+
+<input type="text" id="guestName" placeholder="Tu nombre aquí">
+
+<br>
+
+<button class="button" onclick="confirmAttendance()">Confirmar por WhatsApp</button>
+
+<div class="magic-text" id="magicMessage"></div>
+
+<footer>
+✨ Te esperamos para vivir una noche mágica ✨
+</footer>
+</div>
+
+<script>
+
+/* DESTELLOS */
+for(let i=0;i<70;i++){
+let s=document.createElement("div");
+s.className="sparkle";
+s.style.top=Math.random()*100+"%";
+s.style.left=Math.random()*100+"%";
+s.style.animationDuration=(Math.random()*3+1)+"s";
+document.body.appendChild(s);
+}
+
+function startInvite(){
+document.getElementById("intro").style.display="none";
+document.getElementById("s1").style.display="block";
+let music=document.getElementById("music");
+music.volume=0.5;
+music.play().catch(()=>{});
+}
+
+function nextSection(n){
+document.querySelectorAll(".section").forEach(sec=>sec.style.display="none");
+document.getElementById("s"+n).style.display="block";
+window.scrollTo(0,0);
+}
+
+function copyNumber(){
+navigator.clipboard.writeText("+51958735157");
+alert("Número copiado: +51958735157");
+}
+
+function confirmAttendance(){
+let name=document.getElementById("guestName").value;
+
+if(name.trim()===""){
+alert("Por favor escribe tu nombre");
+return;
+}
+
+let msg=document.getElementById("magicMessage");
+msg.style.display="block";
+msg.innerHTML="✨ Gracias "+name+"... tu confirmación es mágica 👑✨";
+
+setTimeout(()=>{
+let message=encodeURIComponent("Hola, soy "+name+" y confirmo mi asistencia a tus XV Angelica 👑✨");
+window.open("https://wa.me/51958735157?text="+message,"_blank");
+},2000);
+}
+
+</script>
+
+</body>
+</html>
