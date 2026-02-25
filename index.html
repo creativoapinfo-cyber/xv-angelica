@@ -107,36 +107,20 @@ text-shadow:0 0 15px #cfe9ff;
 
 p{margin:10px 0;line-height:1.6}
 
-/* FOTO */
+/* FOTO LIMPIA */
 .photo-wrapper{
-position:relative;
-display:inline-block;
-margin-top:15px;
-}
-
-.photo-wrapper::before{
-content:"";
-position:absolute;
-width:220px;
-height:220px;
-background:radial-gradient(circle,#ffffff,#6ea8ff,transparent 70%);
-border-radius:50%;
-animation:halo 4s infinite alternate;
-z-index:0;
-}
-
-@keyframes halo{
-from{opacity:0.6;transform:scale(1)}
-to{opacity:1;transform:scale(1.1)}
+display:block;
+margin-top:20px;
 }
 
 img{
-position:relative;
-width:180px;
-border-radius:50%;
-border:5px solid #fff;
-box-shadow:0 0 30px #a3d5ff;
-z-index:1;
+width:90%;
+max-width:350px;
+border-radius:0;
+border:none;
+box-shadow:none;
+display:block;
+margin:auto;
 }
 
 /* BOTONES */
@@ -216,7 +200,7 @@ opacity:0.8;
 <h2>Angelica Rodríguez Escobedo</h2>
 
 <div class="photo-wrapper">
-<img src="angelica.png" alt="angelica">
+<img src="angelica.png" alt="Angelica">
 </div>
 
 <p>
@@ -363,5 +347,4 @@ window.open("https://wa.me/51958735157?text="+message,"_blank");
 </script>
 
 </body>
-
 </html>
